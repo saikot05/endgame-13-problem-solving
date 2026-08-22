@@ -47,3 +47,15 @@ function findLCM(a, b) {
     if (a === 0 || b === 0) return 0;
     return Math.abs(a * b) / findGCD(a, b);
 }
+//05. Check if a Number is Prime
+/**
+ * @param {number} num
+ * @return {boolean}
+ */
+function isPrime(num) {
+    if (num <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
