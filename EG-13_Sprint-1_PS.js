@@ -132,3 +132,13 @@ function findMode(arr) {
     }
     return mode;
 }
+//10. Natural Sorting of Strings with Embedded Numbers
+/**
+ * @param {string[]} arr
+ * @return {string[]}
+ */
+function naturalSort(arr) {
+    return arr.sort((a, b) => {
+        return a.localeCompare(b, undefined, { numeric: true })
+    });
+}
