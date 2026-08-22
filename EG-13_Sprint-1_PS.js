@@ -37,3 +37,13 @@ function findGCD(a, b) {
     }
     return a;
 }
+//04. Calculate the Least Common Multiple (LCM)
+/**
+ * @param {number} a
+ * @param {number} b
+ * @return {number}
+ */
+function findLCM(a, b) {
+    if (a === 0 || b === 0) return 0;
+    return Math.abs(a * b) / findGCD(a, b);
+}
