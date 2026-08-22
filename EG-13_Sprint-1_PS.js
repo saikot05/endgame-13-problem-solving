@@ -22,3 +22,18 @@ function generateFibonacci(n) {
     }
     return fib;
 }
+
+//03. Calculate the Greatest Common Divisor (GCD)
+/**
+ * @param {number} a
+ * @param {number} b
+ * @return {number}
+ */
+function findGCD(a, b) {
+    while (b !== 0) {
+        const temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
