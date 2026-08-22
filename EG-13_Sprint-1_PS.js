@@ -59,3 +59,29 @@ function isPrime(num) {
     }
     return true;
 }
+
+//06. Merge Two Sorted Arrays into One Sorted Array
+/**
+ * @param {number[]} arr1
+ * @param {number[]} arr2
+ * @return {number[]}
+ */
+function mergeSortedArrays(arr1, arr2) {
+    const merged = [];
+    let l = 0,
+        r = 0;
+    while (l < arr1.length && r < arr2.length) {
+        if (arr1[l] < arr2[r]) {
+            merged.push(arr1[l]);
+            l++;
+        } else {
+            merged.push(arr2[r]);
+            r++;
+        }
+    }
+
+
+    return [...merged, ...arr1.slice(l), ...arr2.slice(r)];
+
+
+}
