@@ -101,4 +101,13 @@ function findMedian(nums) {
     }
 }
 
-console.log(findMedian([7, 1, 3, 4, 9]));
+//08. Find the Second Largest Number in an Array
+/**
+ * @param {number[]} nums
+ * @return {number|null}
+ */
+function findSecondLargest(nums) {
+    nums.sort((a, b) => b - a);
+
+    return nums.length >= 2 ? nums[1] : null;
+}
